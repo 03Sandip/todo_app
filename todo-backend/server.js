@@ -11,7 +11,7 @@ app.use(express.json())
 
 const connectDB = async () =>{
     try {
-        await mongoose.connect("mongodb+srv://sandipgdscbcrec:b4vHwFl4oVeXNtsO@todoappdb.9xeie.mongodb.net/?retryWrites=true&w=majority&appName=TodoAppDB")
+        await mongoose.connect(your_mongodb_connection_string) // Add your_mongodb_connection_string
         console.log("MongoDB connected!!")
     } catch(error){
         console.error("MongoDB connection Failed",error)
